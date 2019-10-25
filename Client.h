@@ -11,9 +11,10 @@ public:
 	int getNbrReservation();
 	std::string getNom();
 	std::string getPrenom();
+	std::string getId();
 	
 private:
-	int m_id;
+	std::string m_id;
 	std::string m_nom;
 	std::string m_prenom;
 	int m_nbr_reservation;

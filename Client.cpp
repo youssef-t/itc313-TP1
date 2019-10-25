@@ -1,33 +1,32 @@
 #include "Client.h"
-#include <iostream>
 
 Client::Client(std::string name, std::string prenom) : m_nom(name), m_prenom(prenom){
 }
 	
-Client::setId(std::string id){
+void Client::setId(std::string id){
 	m_id = id;
 }
 
-Client::setNom(std::string nom){
+void Client::setNom(std::string nom){
 	m_nom = nom ;
 }
 
-Client::setPrenom(std::string prenom){
+void Client::setPrenom(std::string prenom){
 	m_prenom = prenom;
 }
 
-Client::setNbrReservation(int nbr_reservation ){
+void Client::setNbrReservation(int nbr_reservation ){
 	m_nbr_reservation = nbr_reservation;
 }
 
-Client::getNom(){
+std::string Client::getNom(){
 	return m_nom;
 }
 
-Client::getPrenom(){
+std::string Client::getPrenom(){
 	return m_prenom;
 }
 
-Client::getNbrReservation(){
+std::string Client::getNbrReservation(){
 	return m_nbr_reservation;
 }

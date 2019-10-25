@@ -1,5 +1,4 @@
-#include "Client.h"
-#include <iostream>
+#include "Client.h" // La bibliothèque iostream est incluse dans "Client.h"
 
 using namespace std;
 

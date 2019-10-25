@@ -1,8 +1,9 @@
 #pragma once
+#include<iostream>
 
 class Client{
 public:
-	Client(char name=NONE, char prenom=NONE, int nbr_reservation=1);
+	Client(std::string name = "NONE", std::string prenom = "NONE");
 	void setId(std::string id);
 	void setNom(std::string nom);
 	void setPrenom(std::string prenom);

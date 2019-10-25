@@ -1,12 +1,13 @@
 #include "Client.h"
 #include <iostream>
 
-Client::Client(char name, char prenom, int nbr_reservation) : m_nom(default_name), m_prenom(), m_nbr_reservation {
+Client::Client(std::string name, std::string prenom) : m_nom(default_name), m_prenom(), m_nbr_reservation {
 }
 	
 Client::setId(std::string id){
 	m_id = id;
 }
+
 Client::setNom(std::string nom){
 	m_nom = nom ;
 }
@@ -26,8 +27,3 @@ Client::getPrenom(){
 Client::getNbrReservation(){
 	return m_nbr_reservation;
 }
-
-	int m_id;
-	std::string m_nom;
-	std::string m_prenom;
-	int m_nbr_reservation;

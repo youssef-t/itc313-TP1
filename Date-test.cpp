@@ -10,7 +10,7 @@ int main(){
 	cin>>day;
 	cin>>month;
 	cin>>year;
-	date.modifDate(day,month,year); //La date est par défaut: 1 1 2019, on modifie la variabledate
+	date.modifDate(day,month,year); //La date est par défaut: 1 1 2019, on modifie la variable date
 	cout<<"La date de votre résérvation est: \n";
 	cout<<"\t Le jour: "<<date.getDay()<<endl;
 	cout<<"\t Le mois: "<<date.getMonth()<<endl;

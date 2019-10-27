@@ -1,5 +1,9 @@
 #include "Client.h"
+<<<<<<< HEAD
 #include <string>
+=======
+
+>>>>>>> Question2
 Client::Client(std::string name, std::string prenom) : m_nom(name), m_prenom(prenom){
 }
 	

@@ -1,21 +1,21 @@
 #include "Client.h" // La bibliothèque iostream est incluse dans "Client.h"
-
+#include <iostream>
 using namespace std;
 
 int main(){
 	string T;
 	Client client;
-	int nbr_reservation
-	cout<<"Entrer le nom du client"<<endl;
-	cin>>T;
+	int help_number ;
+	cout << "Entrer le nom du client"<<endl;
+	cin >> T;
 	client.setNom(T);
-	cout<<"Entrer le prénom du client"<<endl;
-	cin>>T;
+	cout << "Entrer le prénom du client"<<endl;
+	cin >> T;
 	client.setPrenom(T);
-	cout<<"Entrer un identifiant pour l'utilisateur"<<endl;
-	cin>>T;	
-	client.setId(T);
-	cout<<"Les informations du client sont: "
+	cout << "Entrer un identifiant pour l'utilisateur"<<endl;
+	cin >> help_number;	
+	client.setId(help_number);
+	cout << "Les informations du client sont: ";
 	cout<<"\t identifiant: "<< client.getId();
 	cout<<"\t Prenom: "<< client.getPrenom();
 	cout<<"\t Nom: "<< client.getNom();

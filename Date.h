@@ -3,15 +3,15 @@
 
 class Date {
 public:
-	Date(int day=1,int month=1,int year=2019); //constructor with a default date value 1 1 2019
+	Date(int day=1, int month=1, int year=2019); //constructor with a default date value 1 1 2019
 	
-	int getYear();
-	int getMonth();
-	int getDay();
-
 	void setYear(int year);
 	void setMonth(int month);
 	void setDay(int day); 
+
+	int getYear() const;
+	int getMonth() const;
+	int getDay() const;
 
 	void modifDate(int day,int month,int year);
 private:

@@ -31,15 +31,15 @@ void Date::modifDate(int date, int month, int year){
 	setYear(year);
 }
 
-int Date::getYear(){
+int Date::getYear() const{
 	return m_year;
 }
 
-int Date::getMonth(){
+int Date::getMonth() const{
 	return m_month;
 }
 
-int Date::getDay(){
+int Date::getDay() const{
 	return m_day;
 }
 

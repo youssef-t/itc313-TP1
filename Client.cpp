@@ -1,12 +1,11 @@
-#include "Client.h"
-<<<<<<< HEAD
-#include <string>
-=======
+#include "Client.h" //la bibliothèque string est incluse dans Client.h
 
->>>>>>> Question2
-Client::Client(std::string name, std::string prenom) : m_nom(name), m_prenom(prenom){
+Client::Client(std::string nom, std::string prenom, int id,int nbr_reservation) : m_nom(nom), m_prenom(prenom), m_id(id) ,m_nbr_reservation(nbr_reservation){
 }
-	
+
+Client::Client(){
+
+}
 void Client::setId(int id){
 	m_id = id ;
 }

@@ -3,18 +3,12 @@
 
 class Client{
 public:
-<<<<<<< HEAD
-	Client(std::string name, std::string prenom );
-	
+	Client(std::string nom, std::string prenom, int id ,int nbr_reservation=1);
+	Client();
+
 	void setId(int id) ;
 	void setNom(std::string nom) ;
 	void setPrenom(std::string prenom) ;
-=======
-	Client(char name, char prenom, int nbr_reservation=1);
-	void setId(std::string id);
-	void setNom(std::string nom);
-	void setPrenom(std::string prenom);
->>>>>>> Question2
 	void setNbrReservation(int nbr_reservation);
 	
 	int getNbrReservation() const;

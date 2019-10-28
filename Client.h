@@ -17,9 +17,9 @@ public:
 	int getId() const;
 	
 private:
-	int m_id;
 	std::string m_nom;
 	std::string m_prenom;
+	int m_id;
 	int m_nbr_reservation;
 
 };

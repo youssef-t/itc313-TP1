@@ -12,8 +12,21 @@ void Chambre::setId(int id){
 	m_id = id;
 } 
 
-void Chambre::setType(Type type){
-	m_type = type;
+void Chambre::setType(int type){
+	switch (type){
+		case 1 : 
+			m_type = Single ;
+			break;
+		case 2 :
+			m_type = Double ;
+			break;
+		case 3 :
+			m_type = Suite ;
+			break;
+		default:
+			std::cout << "ERREUR: Valeur invalide. Le type de la chambre sera par défaut single." << std::endl;
+			m_type = Single ;
+	}
 } 
 
 void Chambre::setPrix(double prix){

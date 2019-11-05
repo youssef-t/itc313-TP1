@@ -25,8 +25,8 @@ void Date::setYear(int year){
 		std::cout<<"Error: year out of range (default value is 2019)\n";
 }
 
-void Date::modifDate(int date, int month, int year){
-	setDay(date);
+void Date::modifDate(int day, int month, int year){
+	setDay(day);
 	setMonth(month);
 	setYear(year);
 }

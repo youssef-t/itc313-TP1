@@ -12,7 +12,9 @@ public:
 	Chambre(int id, Type type, double m_prix);
 
 	void setId(int id);
-	void setType(Type type);
+	void setType(int type); 
+	//On fera le test de "type" dans la fonction au lieu de juste déclarer que "type" est une enum "Type"
+	
 	void setPrix(double prix);
 
 	int getId() const;

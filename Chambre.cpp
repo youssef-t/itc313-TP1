@@ -36,10 +36,6 @@ void Chambre::setPrix(double prix){
 		std::cout << "Erreur: prix invalide" << std::endl;
 }
 
-/*void Chambre::affichageTypeDisponible(){
-	for(int i=0;  type_chambre)
-		std::cout << 
-} */
 
 int Chambre::getId() const {
 	return m_id;

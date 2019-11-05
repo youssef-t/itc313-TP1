@@ -28,14 +28,14 @@ void Chambre::setPrix(double prix){
 		std::cout << 
 } */
 
-int Chambre::getId(){
+int Chambre::getId() const {
 	return m_id;
 }
 
-std::string Chambre::getType(){
+std::string Chambre::getType() const{  //getType permet de donner le type de la chambre en string au lieu d'un entier
 	return type_chambre[m_type];
 }
 
-double Chambre::getPrix(){
+double Chambre::getPrix() const {
 	return m_prix;
 }

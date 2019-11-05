@@ -12,7 +12,7 @@ void Date::setDay(int day){
 }
 
 void Date::setMonth(int month){
-	if( month < 0 && month <13)
+	if( month > 0 && month <13)
 		m_month = month;
 	else
 		std::cout<<"Error: month out of range (default value is 1) \n";

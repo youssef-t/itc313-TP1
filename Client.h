@@ -6,6 +6,7 @@ public:
 	Client(std::string nom, std::string prenom, int id ,int nbr_reservation=1);
 	Client();
 
+	// Les setters permettront d'entrer les informations du client ou de les modifier
 	void setId(int id) ;
 	void setNom(std::string nom) ;
 	void setPrenom(std::string prenom) ;

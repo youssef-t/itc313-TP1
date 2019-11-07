@@ -36,6 +36,36 @@ void Chambre::setPrix(double prix){
 		std::cout << "Erreur: prix invalide" << std::endl;
 }
 
+void Chambre::chambreModif(int id, int type, double prix){
+	setId(id);
+	setType(type);
+	setPrix(prix);
+}
+
+void Chambre::saisieClavier(){
+	int help_id;
+	std::cout << "Entrer l'identifiant de la chambre : " << std::endl;
+	std::cin >> help_id ;
+	//setId(help_id); 
+
+	int help_type; //un test sera exécuté sur help_type (le test fait partie du getter) 
+	//il faut qu'elle prenne l'une des valeurs: 1,2,3 sinon elle prendra par défaut la valeur 1 qui correspond au type "single"
+	std::cout << "Entrer le type de la chambre (1- single/ 2- double/ 3- suite): " << std::endl;
+	std::cin >> help_type;
+	//setType(help_type);
+
+	double help_prix;
+	std::cout << "Entrer le prix de la chambre : "<< std::endl;
+	std::cin >> help_prix ;
+	//setPrix(help_prix);
+
+	chambreModif(help_id, help_type, help_prix); //au lieu d'écrire les trois setters
+}
+
+void Chambre::affichage() const{
+	std::cout << "La chambre d'identifiant " << getId() << ": \n";
+	std::cout << "\t -Type : " << getType() << "\t \t -Prix : "<< getPrix() << " euros \n" ;
+}
 
 int Chambre::getId() const {
 	return m_id;

@@ -1,14 +1,15 @@
 #include "Hotel.h" //les bibliothèques <vector>,<string>,"Chambre" sont incluses dans "Hotel.h"
 #include <iostream>
-Hotel::Hotel(){
 
+Hotel::Hotel():m_id(identifiant_auto_str()){
+	
 }
 
-Hotel::Hotel(std::string id,std::string nom, std::string ville, std::vector<Chambre> chambre): 
-m_id(id),
+Hotel::Hotel(std::string nom, std::string ville, std::vector<Chambre> chambre): 
 m_nom(nom),
 m_ville(ville),
-m_chambres(chambre){
+m_chambres(chambre),
+m_id(identifiant_auto_str()){
 
 }
 
@@ -72,8 +73,14 @@ void Hotel::affichage() const{
 	std::cout << "\t Liste des chambres de l'hotel: " << std::endl;
 	j=0;
 	for(Chambre& i:getChambre() ){ //passage par référence afin d'éviter de copier
-		std::cout << "----Chambre "<<j+1<<" -----\n";
+		std::cout << "---- Chambre "<<j+1<<" -----\n";
 		i.affichage(); // affichage() est une méthode de la classe Chambre
+		std::cout <<"\n";
 		j++;
 	}	
 }
+
+std::string Hotel::identifiant_auto_str(){
+	static int index=0;
+	index++;
+	return getNom() + std::to_string(index-1);}

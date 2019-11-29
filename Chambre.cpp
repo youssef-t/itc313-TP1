@@ -1,6 +1,11 @@
 #include "Chambre.h" //la bibliothèque string est incluse dans Chambre.h
 #include <iostream>
-Chambre::Chambre(){
+//constructeur par défaut => identifiant automatique et unique
+Chambre::Chambre():m_id( identifiant_auto_int() ){
+
+}
+
+Chambre::Chambre(Type type, double prix) : m_id( identifiant_auto_int()),m_type(type), m_prix(prix) {
 
 }
 
@@ -78,3 +83,10 @@ std::string Chambre::getType() const{  //getType permet de donner le type de la 
 double Chambre::getPrix() const {
 	return m_prix;
 }
+
+int Chambre::identifiant_auto_int(){
+	static int index=0;
+	index++ ;
+	return index-1;
+}
+

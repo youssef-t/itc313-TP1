@@ -3,8 +3,9 @@
 
 class Client{
 public:
-	Client(std::string nom, std::string prenom, int id ,int nbr_reservation=1);
 	Client();
+	Client(std::string nom, std::string prenom ,int nbr_reservation=1);
+	//Client(std::string nom, std::string prenom, int nbr_reservation=1);
 
 	// Les setters permettront d'entrer les informations du client ou de les modifier
 	void setId(int id) ;
@@ -16,11 +17,14 @@ public:
 	std::string getNom() const;
 	std::string getPrenom() const;
 	int getId() const;
+
+	void affichage() const;
 	
 private:
 	std::string m_nom;
 	std::string m_prenom;
 	int m_id;
 	int m_nbr_reservation;
+	int identifiant_auto_int();
 
 };

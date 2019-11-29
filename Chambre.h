@@ -1,14 +1,15 @@
 #pragma once
 #include <string>
 
-
-class Chambre{
-public:
-	enum Type{
+enum Type{
 		Single = 0 , Double, Suite	// 0 est juste pour que ça soit mieux précisé que l'enum commence par 0
 	};
 
+class Chambre{
+public:
+	
 	Chambre();
+	Chambre(Type type, double prix);
 	Chambre(int id, Type type, double prix);
 
 	//Les setters permettront la saisie des informations sur la chambre ou de les modifier
@@ -26,6 +27,7 @@ public:
 
 	std::string type_chambre[3] = {"Single","Double","Suite"}; //permettre la conversion du type de la chambre qui est "int" à string
 private:
+	int identifiant_auto_int();
 	int m_id;
 	Type m_type;
 	double m_prix;

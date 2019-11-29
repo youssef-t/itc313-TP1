@@ -3,8 +3,8 @@
 #include <iostream>
 
 int main(){
-	Chambre chambre_a(10, Chambre::Double, 39.9); 
-	// Double est déclaré dans une enum qui se trouve dans la clase Chambre. Il ne s'agit pas d'une variable globale 
+	Chambre chambre_a(Double, 39.9); 
+	// Double est déclaré dans une enum 
 	std::cout << "La chambre d'identifiant " << chambre_a.getId() << ": \n";
 	std::cout << "\t -Type : " << chambre_a.getType() << "\t \t -Prix : "<< chambre_a.getPrix() << " euros \n" ;// On peut utiliser la méthode affichage
 

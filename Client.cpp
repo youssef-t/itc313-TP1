@@ -1,9 +1,10 @@
 #include "Client.h" //la bibliothèque string est incluse dans Client.h
+#include <iostream>
+Client::Client(std::string nom, std::string prenom, int nbr_reservation) : m_nom(nom), m_prenom(prenom), m_id(identifiant_auto_int()) ,m_nbr_reservation(nbr_reservation){
 
-Client::Client(std::string nom, std::string prenom, int id,int nbr_reservation) : m_nom(nom), m_prenom(prenom), m_id(id) ,m_nbr_reservation(nbr_reservation){
 }
 
-Client::Client(){
+Client::Client():m_id(identifiant_auto_int()){
 
 }
 void Client::setId(int id){
@@ -37,3 +38,18 @@ int Client::getNbrReservation() const{
 int Client::getId() const {
 	return m_id;
 }
+
+void Client::affichage() const{
+	std::cout << "Les informations du client sont: " << std::endl;
+	std::cout<<"\t Identifiant: "<< getId() << std::endl;
+	std::cout<<"\t Prenom: "<< getPrenom() << std::endl;
+	std::cout<<"\t Nom: "<< getNom() << std::endl ;
+	std::cout<<"\t Son nombre de réservations: " << getNbrReservation()<<std::endl;
+}
+
+int Client::identifiant_auto_int(){
+	static int index=0;
+	index++ ;
+	return index-1;
+}
+

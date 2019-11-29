@@ -8,9 +8,9 @@ class Hotel{
 public:
 	//Constuctors
 	Hotel();
-	Hotel(std::string id,std::string nom, std::string ville, std::vector<Chambre> chambre); //le dernier paramètre servira à rentrer 
+	Hotel(std::string nom, std::string ville, std::vector<Chambre> chambre); //le dernier paramètre servira à rentrer 
 																//directement les chambres que contient l'hotel dès l'initialisation
-	
+
 	//Getters
 	std::string getId() const;
 	std::string getNom() const;
@@ -33,8 +33,10 @@ public:
 
 
 private:
-	std::string m_id;
+	std::string identifiant_auto_str();
 	std::string m_nom;
 	std::string m_ville;
 	std::vector<Chambre> m_chambres;
+	std::string m_id ;
+
 };

@@ -62,3 +62,18 @@ void Hotel::addNChambres(){
 	}
 }
 
+//On utilisera les setters dans cette fonction afin d'afficher toutes ses infos
+void Hotel::affichage() const{
+	long unsigned int j;
+	std::cout << "------------	L'Hotel:	------------"<< std::endl;
+	std::cout << "------------\t"<< getNom()<<"\t------------"<< std::endl;
+	std::cout << "\t ID: " << getId()<< std::endl;
+	std::cout << "\t Ville: "<< getVille() << std::endl;
+	std::cout << "\t Liste des chambres de l'hotel: " << std::endl;
+	j=0;
+	for(Chambre& i:getChambre() ){ //passage par référence afin d'éviter de copier
+		std::cout << "----Chambre "<<j+1<<" -----\n";
+		i.affichage(); // affichage() est une méthode de la classe Chambre
+		j++;
+	}	
+}

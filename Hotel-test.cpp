@@ -12,7 +12,9 @@ int main(){
 
 	//Hotel::Hotel(std::string id,std::string nom, std::string ville, std::vector<Chambre> chambre)
 	Hotel hotel("HID5","Ibis","Dijon",chambres); //initialisation avec le constructeur
-
+	hotel.affichage();
+	hotel.addNChambres(); //Ajout de N chambres (que l'utilisateur précise)
+	hotel.affichage();
 
 
 

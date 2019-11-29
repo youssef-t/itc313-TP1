@@ -10,7 +10,7 @@ public:
 	Hotel();
 	Hotel(std::string id,std::string nom, std::string ville, std::vector<Chambre> chambre); //le dernier paramètre servira à rentrer 
 																//directement les chambres que contient l'hotel dès l'initialisation
-
+	
 	//Getters
 	std::string getId() const;
 	std::string getNom() const;
